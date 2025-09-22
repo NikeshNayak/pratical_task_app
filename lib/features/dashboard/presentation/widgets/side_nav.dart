@@ -150,7 +150,6 @@ class SideNavigationMenu extends StatelessWidget {
                           ),
                         ),
                         if (item.text != null) ...[
-                          SizedBox(height: 4.h),
                           Text(
                             item.text!,
                             textAlign: TextAlign.center,
