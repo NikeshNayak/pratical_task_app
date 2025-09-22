@@ -148,25 +148,17 @@ class TopHeaderBar extends StatelessWidget implements PreferredSizeWidget {
                 bottomLeft: Radius.circular(10.r),
                 bottomRight: Radius.circular(10.r),
               ),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withValues(alpha: 0.2965),
-                  blurRadius: 10.r,
-                  spreadRadius: 0.r,
-                  offset: Offset(0.w, 2.h),
-                ),
-              ],
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 SizedBox(
-                  height: 25.h,
-                  width: 25.w,
+                  height: 23.h,
+                  width: 23.w,
                   child: SvgPicture.asset(
                     SVGPath.arrowDownIcon,
-                    height: 25.h,
-                    width: 25.w,
+                    height: 23.h,
+                    width: 23.w,
                   ),
                 ),
               ],
