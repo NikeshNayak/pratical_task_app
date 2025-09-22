@@ -712,28 +712,32 @@ class _DashboardScreenState extends State<DashboardScreen>
       padding: EdgeInsets.symmetric(vertical: 16.h, horizontal: 16.w),
       child: Column(
         children: [
-          const OtherInputFieldWidget(title: 'Loyalty No'),
+          Expanded(child: const OtherInputFieldWidget(title: 'Loyalty No')),
           SizedBox(height: 5.h),
           Divider(color: AppColors.dividerColor2, thickness: 1.h, height: 1.h),
           SizedBox(height: 5.h),
-          const OtherInputFieldWidget(title: 'Customer Since'),
+          Expanded(child: const OtherInputFieldWidget(title: 'Customer Since')),
           SizedBox(height: 5.h),
           Divider(color: AppColors.dividerColor2, thickness: 1.h, height: 1.h),
           SizedBox(height: 5.h),
-          const OtherInputFieldWidget(
-            title: 'Birthday',
-            iconPath: SVGPath.birthdayIcon,
-            iconHeight: 13.13,
-            iconWidth: 12.5,
+          Expanded(
+            child: const OtherInputFieldWidget(
+              title: 'Birthday',
+              iconPath: SVGPath.birthdayIcon,
+              iconHeight: 13.13,
+              iconWidth: 12.5,
+            ),
           ),
           SizedBox(height: 5.h),
           Divider(color: AppColors.dividerColor2, thickness: 1.h, height: 1.h),
           SizedBox(height: 5.h),
-          const OtherInputFieldWidget(
-            title: 'Anniversary',
-            iconPath: SVGPath.anniversaryIcon,
-            iconHeight: 12.84,
-            iconWidth: 10.24,
+          Expanded(
+            child: const OtherInputFieldWidget(
+              title: 'Anniversary',
+              iconPath: SVGPath.anniversaryIcon,
+              iconHeight: 12.84,
+              iconWidth: 10.24,
+            ),
           ),
         ],
       ),
