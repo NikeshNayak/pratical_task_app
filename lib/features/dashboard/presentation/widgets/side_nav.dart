@@ -24,11 +24,7 @@ class SideNavigationMenu extends StatelessWidget {
   final ValueChanged<int>? onItemTap;
 
   static final List<SideNavItem> items = <SideNavItem>[
-    SideNavItem(
-      iconPath: SVGPath.eatOSBigLogo,
-      iconHeight: 28,
-      iconWidth: 56,
-    ),
+    SideNavItem(iconPath: SVGPath.eatOSBigLogo, iconHeight: 28, iconWidth: 56),
     SideNavItem(
       iconPath: SVGPath.newOrderIcon,
       iconHeight: 36.37,
@@ -90,18 +86,20 @@ class SideNavigationMenu extends StatelessWidget {
                   return InkResponse(
                     onTap: () => onItemTap?.call(index),
                     child: Container(
-                      height: 70.h,
+                      height: 50.h,
                       width: 60.w,
-                      decoration: const BoxDecoration(color: AppColors.primaryColor),
+                      decoration: const BoxDecoration(
+                        color: AppColors.primaryColor,
+                      ),
                       child: Column(
                         children: [
                           SizedBox(
-                            height: item.iconHeight,
-                            width: item.iconWidth,
+                            height: item.iconHeight.h,
+                            width: item.iconWidth.w,
                             child: SvgPicture.asset(
                               item.iconPath,
-                              height: item.iconHeight,
-                              width: item.iconWidth,
+                              height: item.iconHeight.h,
+                              width: item.iconWidth.w,
                               colorFilter: const ColorFilter.mode(
                                 Colors.white,
                                 BlendMode.srcIn,
@@ -139,12 +137,12 @@ class SideNavigationMenu extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         SizedBox(
-                          height: item.iconHeight,
-                          width: item.iconWidth,
+                          height: item.iconHeight.h,
+                          width: item.iconWidth.w,
                           child: SvgPicture.asset(
                             item.iconPath,
-                            height: item.iconHeight,
-                            width: item.iconWidth,
+                            height: item.iconHeight.h,
+                            width: item.iconWidth.w,
                             colorFilter: const ColorFilter.mode(
                               Colors.white,
                               BlendMode.srcIn,
@@ -177,4 +175,3 @@ class SideNavigationMenu extends StatelessWidget {
     );
   }
 }
-
